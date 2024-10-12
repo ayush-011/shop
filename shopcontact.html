@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #f9f9f9, #eaeaea); /* Light gradient for modern look */
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333; /* Darker color for title */
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease;
+    border: 1px solid #828181; /* Consistent border color */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between elements */
+}
+
+/* Form Group Styling */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #000000;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px; /* Set minimum height for the textarea */
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.3); /* Soft shadow for button */
+}
+
+.submit-btn:hover {
+    background-color: #e55542;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .submit-btn {
+        width: 100%; /* Make the button full width on mobile */
+    }
+}
+
+</style>
+<body>
+    <section class="contact-section">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="example.1@example.com" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+    
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    
+</body>
+</html>

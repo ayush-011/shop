@@ -1,0 +1,256 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FF6347;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF6347;
+    color: #fff;
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: #FF6347;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar and Cart */
+.search-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-cart input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+    width: 250px;
+}
+
+.search-cart input:focus {
+    border-color: #FF6347;
+    outline: none;
+}
+
+.cart {
+    padding: 10px 20px;
+    background-color: #FF6347;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart:hover {
+    background-color: #e55542;
+    cursor: pointer;
+}
+
+
+.cart {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #FF6347;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    color: #000000;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero button {
+    padding: 12px 30px;
+    background-color: #FF6347;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Increase gap between products (if needed) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; /* You can increase the gap here */
+}
+
+/* Style each product with some padding and border */
+.product {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effects */
+}
+
+/* Hover effect: Add shadow and slight scaling */
+.product:hover {
+    transform: translateY(-10px) scale(1.05); /* Makes the product appear like it's 'lifting' */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Adds a shadow effect */
+}
+
+/* Style the product images */
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Add a small corner radius for a smoother look */
+}
+
+/* Style the Add to Cart button */
+.product button {
+    padding: 10px 20px;
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Add to Cart button */
+.product button:hover {
+    background-color: #e55542;
+}
+
+section h2{
+    margin-left: 18px;
+}
+
+span{
+    font-size: small;
+}
+
+button:hover {
+    background-color: #7e7979;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+footer .footer-links a:hover {
+    color: #FF6347;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .search-cart input {
+        width: 150px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+         url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
